@@ -1,0 +1,207 @@
+<!doctype html>
+	<html class="no-js" lang="zxx" ng-app="conectikidslanding">
+	<head>
+		<title>ConectiKids</title>
+		<meta name="google-site-verification" content="C_F39-DSOKUX0oF4WcSrfKspb2u32FsBXUnXBw2atoM" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Apps Craft - Creative Agency Template by pixiefy">
+		<meta name="author" content="pixiefy">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+		<script type="text/javascript" src="../../js/angular.min.js"></script>		
+        <script type="text/javascript" src="../../js/angular-resource.min.js"></script>
+		<script type="text/javascript" src="../../js/angularMain.js"></script>
+
+		<link rel="stylesheet" href="../../css/owl.theme.css">
+		<link rel="stylesheet" href="../../css/owl.transitions.css">
+		<link rel="stylesheet" href="../../css/owl.carousel.css">
+		<!-- Owl Stylesheet -->
+		<link rel="stylesheet" href="../../css/magnific-popup.css">
+		<!-- Magnific PopUP Stylesheet -->
+		<link rel="stylesheet" href="../../css/isotope.css">
+		<!-- Isotope Stylesheet -->
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<!-- Bootstrap Stylesheet -->
+		<link rel="stylesheet" href="../../css/et-lant-font.css" />
+		<!-- Et-Lant Font Stylesheet -->
+		<link rel="stylesheet" href="../../css/3dslider.css" />
+		<!-- 3D Slider Stylesheet -->
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<!-- Animate Stylesheet -->
+		<link rel="stylesheet" href="../../css/material-design-iconic-font.css" />
+		<!-- Iconic Font Stylesheet -->
+
+		<link rel="stylesheet" href="../../style.css">
+		<!-- Main Style.css Stylesheet -->
+
+		<link rel="stylesheet" href="../../css/responsive.css">
+		<!-- Resposive.css Stylesheet -->
+
+	</head>
+
+
+
+	<body class="apps-craft-v5">
+
+	<!-- Apps Craft Body Start -->
+	<div id="preloader"></div>
+
+	<!-- Apps Craft Main Menu -->
+	<header style=" height: 12% !important" class="apps-craft-main-menu-area" id="apps-craft-menus">
+		<div class="container">
+			<div class="row">
+
+
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="apps-craft-logo" style="text-align: center !important">
+						<a href="#apps-craft-home">
+							<img style="max-width: 30%" src="../../img/logoblanco.png" alt="Apps Craft Logo">
+						</a>
+					</div> <!-- .apps-craft-logo END -->
+				</div>
+
+
+
+
+
+			</div>
+		</div>
+	</header> <!-- .apps-craft-main-menu END -->
+
+	<!-- Apps Craft Welcome Section -->
+	<section class="apps-craft-welcome-section apps-craft-welcome-section-v5" id="apps-craft-home">
+
+
+		<div class="apps-craft-position-rel-v2">
+			<div id="apps_craft_animation-2">
+				<div class="layer" data-depth="0.20"><div class="background"><img src="../../img/version-5-bg.png" alt=""></div></div>
+			</div>
+		</div>
+
+
+		<div class="apps-craft-welcome-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-md-offset-12 col-md-pull-12">
+						<div class="apps-craft-welcome-tbl">
+							<div class="apps-craft-welcome-tbl-c">
+								<div class="apps-craft-welcome-content text-left">
+
+									<!--TODO LO QUE SE HAGA DENTRO DE ESTA DIV ESTA CON ANGULAR -->
+									<div style="margin-top: 100px" ng-controller="mailingController" class="apps-craft-contact-form-content wow fadeIn" data-wow-delay="800ms">
+
+
+										<div ng-if="state.writeContact" class="apps-craft-contact-form-content-inner">
+											<h2>Hola {{ state.user.name }}, parece que has olvidado tu contraseña, <span>Ingresa una nueva porfavor</span></h2>
+											<div class="apps-craft-contact-form">
+
+
+													<input type="password" ng-model="state.password" class="contactInputs"  placeholder="Nueva contraseña">
+
+
+
+													<div class="apps-craft-submit-btn-ar">
+														<input ng-click="enviarInfo()" type="submit" name="Send Message" value="Actualizar" id="apps-craft-input-send">
+													</div>
+
+
+
+												
+											</div> 
+										</div> 
+
+
+										<div style="text-align: center !important" ng-if="state.sendingInfo" class="apps-craft-contact-form-content-inner">
+											<h2><span>Estamos cambiando tu contraseña</span></h2>
+											<div class="apps-craft-contact-form">
+												<div class="sk-folding-cube">
+												  <div class="sk-cube1 sk-cube"></div>
+												  <div class="sk-cube2 sk-cube"></div>
+												  <div class="sk-cube4 sk-cube"></div>
+												  <div class="sk-cube3 sk-cube"></div>
+												</div>								
+											</div> 
+										</div>
+
+
+
+										<div style="text-align: center !important" ng-if="state.infoSended" class="apps-craft-contact-form-content-inner">
+											<h2><span>Listo, ¡Perfecto, tu contraseña ya ha sido actualizada!</span></h2>
+											<div class="apps-craft-contact-form">
+																			
+											</div>
+										</div>
+
+
+										<div style="text-align: center !important" ng-if="state.errorShowed" class="apps-craft-contact-form-content-inner">
+											<h2><span>Lo sentimos, el enlace ha caducado</span></h2>
+											<div class="apps-craft-contact-form">
+																			
+											</div>
+										</div>
+
+									</div> <!-- .apps-craft-contact-form-content END -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> 
+
+
+
+	<!-- Apps Craft Footer Section -->
+	<footer class="apps-craft-footer-section" id="apps-craft-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<figure class="apps-craft-footer-logo text-center">
+						<a href="#">
+							<img style="max-width: 50%" src="../../img/logoblanco.png" alt="Apps Craft Footer Logo" class="wow fadeInUp" data-wow-delay=".7s">
+						</a>
+					</figure> <!-- .apps-craft-footer-logo END -->
+				</div>
+			</div>
+		</div>
+	</footer> <!-- .apps-craft-footer-section END -->
+
+	<!-- js File Start -->
+
+	<script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+	<!-- jquery-3.1.1.min.js -->
+	<script type="text/javascript" src="../../js/jquery.ajaxchimp.min.js"></script>
+	<!--jquery.ajaxchimp.min.js  -->
+	<script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+	<!--jquery.easing.1.3.js  -->
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	<!-- bootstrap.min.js -->
+	<script src="../../js/owl.carousel.min.js"></script>
+	<!-- owl.carousel.min.js -->
+	<script src="../../js/isotope.pkgd.min.js"></script>
+	<!-- isotope.pkgd.min.js -->
+	<script src="../../js/jquery.magnific-popup.min.js"></script>
+	<!-- jquery.magnific-popup.min.js -->
+	<script src="../../js/skrollr.min.js"></script>
+	<!-- skrollr.min.js -->
+	<script src="../../js/utils.js"></script>
+	<!-- utils.js -->
+	<script src="../../js/jquery.parallax.js"></script>
+	<!-- jquery.parallax.js -->
+	<script src="../../js/wow.js"></script>
+	<!-- wow.js -->
+	<script src="../../js/jquery.tubular.1.0.js"></script>
+	<!-- jquery.tubular.1.0.js -->
+	<script src="../../js/particles.js"></script>
+	<!-- jquery.particles.js -->
+
+	<script src="../../js/main.js"></script>
+	<!-- main.js -->
+
+	</body>
+</html>
